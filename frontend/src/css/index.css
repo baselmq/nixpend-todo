@@ -1,0 +1,67 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+/* Import icons from flaticon */
+@import "~@flaticon/flaticon-uicons/css/all/all";
+
+/* Import css file */
+@import "../components/sidebar/sidebar.css";
+@import "../components/dark_mode/dark_mode.css";
+@import "../components/navbar/navbar.css";
+@import "../components/columns//columns.css";
+
+/* root */
+:root {
+  /* Light mode colors */
+  --background-color: #ffffff;
+  --primary-color: #f7f7f7;
+  --accent-color: #645ec6;
+  --btn-light-color: #2c2c38;
+  --text-color: #252525;
+  --subtext-color: #858c9a;
+  --todo-dot-color: #3abfe0;
+  --doing-dot-color: #7d68f1;
+  --done-dot-color: #81d7b9;
+  --border-color: #858c9a;
+
+  /* Dark mode colors */
+  --background-color-dark: #21212d;
+  --primary-color-dark: #2c2c38;
+  --accent-color-dark: #645ec6;
+  --btn-light-color-dark: #f7f7f7;
+  --text-color-dark: #ffffff;
+  --subtext-color-dark: #858c9a;
+  --todo-dot-color-dark: #3abfe0;
+  --doing-dot-color-dark: #7d68f1;
+  --done-dot-color-dark: #81d7b9;
+  --border-color-dark: #5d616a;
+}
+
+/* Dark mode */
+body.dark-mode {
+  --background-color: var(--background-color-dark);
+  --primary-color: var(--primary-color-dark);
+  --accent-color: var(--accent-color-dark);
+  --btn-light-color: var(--btn-light-color-dark);
+  --text-color: var(--text-color-dark);
+  --subtext-color: var(--subtext-color-dark);
+  --todo-dot-color: var(--todo-dot-color-dark);
+  --doing-dot-color: var(--doing-dot-color-dark);
+  --done-dot-color: var(--done-dot-color-dark);
+  --border-color: var(--border-color-dark);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Poppins", sans-serif; */
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Nunito", sans-serif;
+
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--background-color);
+}

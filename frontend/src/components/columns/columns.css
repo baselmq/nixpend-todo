@@ -1,0 +1,33 @@
+.container-columns {
+  width: 300px !important;
+  /* height: 100vh; */
+  /* max-height: min-content; */
+  max-height: 85vh;
+
+  /* min-width: 250px !important;
+  min-width: 250px !important; */
+}
+.custom-columns {
+  overflow-x: scroll;
+  height: 100vh;
+  padding-top: 80px;
+}
+.dots {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.title-column {
+  color: var(--subtext-color);
+  font-size: 15px;
+  font-weight: 600;
+}
+.add-new-column {
+  background-color: var(--primary-color);
+  color: var(--subtext-color);
+  width: 300px !important;
+  height: 85vh;
+  font-size: 20px;
+  cursor: pointer;
+}

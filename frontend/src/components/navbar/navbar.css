@@ -1,0 +1,12 @@
+.btn-add-new-task {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 8px 20px;
+  font-size: 16px;
+  border-radius: 200px;
+}
+.menu-dots {
+  cursor: pointer;
+}
