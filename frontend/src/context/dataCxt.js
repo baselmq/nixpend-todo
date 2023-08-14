@@ -1,15 +1,16 @@
-// DataContext.js
-import React, { createContext } from "react";
-import { useAxios } from "../hooks/useAxios";
+import React, { createContext, useState } from "react";
 
 export const DataCxt = createContext();
 
 export const DataContextProvider = ({ children }) => {
-  const url = "http://localhost:8000/api/v1/todo";
-  const { data, loading, error } = useAxios(url);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   return (
-    <DataCxt.Provider value={{ data, loading, error }}>
+    <DataCxt.Provider
+      value={{ data, setData, loading, setLoading, error, setError }}
+    >
       {children}
     </DataCxt.Provider>
   );

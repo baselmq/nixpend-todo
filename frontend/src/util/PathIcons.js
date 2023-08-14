@@ -42,7 +42,7 @@ export class PathIcons {
   static menuDots = (
     <i
       className="fi fi-rs-menu-dots-vertical"
-      style={{ ...active, ...margin, ...font }}
+      style={{ ...grey, ...margin, ...font }}
     ></i>
   );
   static close = (<i className="fi fi-br-cross" style={{ ...grey }}></i>);

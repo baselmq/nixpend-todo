@@ -1,8 +1,8 @@
 import React from "react";
-import "./columns.css";
+import "../../css/index.css";
+
 import CardTask from "../cards/CardTask";
 const Columns = (props) => {
-  // console.log(props.data.tasks);
   return (
     <div className="container-columns col-lg-3">
       <div className="d-flex align-items-center gap-2">

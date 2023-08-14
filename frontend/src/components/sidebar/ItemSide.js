@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { PathIcons } from "../../util/PathIcons";
-
+import "../../css/index.css";
 // button inside sidebar
 const ItemSide = ({ text, active, to }) => {
   return (

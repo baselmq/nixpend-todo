@@ -1,4 +1,5 @@
 import React from "react";
+import "../../css/index.css";
 import { PathIcons } from "../../util/PathIcons";
 
 const SubTaskInput = ({ value, onChange, onRemove }) => {

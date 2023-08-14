@@ -74,23 +74,3 @@ todoSchema.statics.addColumn = async function (nameColumn) {
 };
 
 module.exports = mongoose.model("Todo", todoSchema);
-
-// {
-//   title: {
-//     type: String,
-//     required: [true, "Please Enter title"],
-//   },
-//   description: {
-//     type: String,
-//   },
-//   subTasks: {
-//     type: Array,
-//   },
-//   status: {
-//     type: String,
-//     //   required: true,
-//   },
-//   doneTask: {
-//     type: Boolean,
-//   },
-// },

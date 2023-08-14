@@ -1,10 +1,12 @@
-import React, { useState } from "react";
-import "./add_task.css";
+import React, { useContext, useState } from "react";
+import "../../css/index.css";
 import SubTaskInput from "./SubTaskInput";
 import useAddTask from "../../hooks/useAddTask";
-const AddTask = () => {
+import { statusCxt } from "../../context/statusCxt";
+const AddTask = ({ onAddTask }) => {
   const [subtasks, setSubtasks] = useState([]);
   const { createTask, loading, error } = useAddTask();
+  const { status } = useContext(statusCxt);
 
   const addNewSubtask = () => {
     const newSubtask = { task: "", done: false };
@@ -39,12 +41,10 @@ const AddTask = () => {
       date: Date(),
     };
     try {
-      const response = await createTask(data);
-
-      // Handle success, display a message, redirect, etc.
-      console.log("Task created successfully:", response);
+      await createTask(data);
+      onAddTask();
+      console.log("Task created successfully");
     } catch (error) {
-      // Handle error, display an error message, etc.
       console.error("Error creating task:", error);
     }
   };
@@ -99,9 +99,15 @@ const AddTask = () => {
         <div className="d-flex flex-column mt-3">
           <label htmlFor="status">Status</label>
           <select name="status" id="status" className="mt-1">
-            <option value="Todo">Todo</option>
-            <option value="Doing">Doing</option>
-            <option value="Done">Done</option>
+            {status.map((option, index) => (
+              <option
+                key={index}
+                value={option.title}
+                className="text-capitalize"
+              >
+                {option.title}
+              </option>
+            ))}
           </select>
         </div>
 

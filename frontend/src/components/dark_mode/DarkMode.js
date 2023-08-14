@@ -1,5 +1,6 @@
 import React from "react";
-import "./dark_mode.css";
+import "../../css/index.css";
+
 const DarkMode = () => {
   const setDarkMode = () => {
     document.querySelector("body").classList.add("dark-mode");

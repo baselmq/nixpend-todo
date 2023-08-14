@@ -9,7 +9,9 @@
 @import "../components/sidebar/sidebar.css";
 @import "../components/dark_mode/dark_mode.css";
 @import "../components/navbar/navbar.css";
-@import "../components/columns//columns.css";
+@import "../components/columns/columns.css";
+@import "../components/popup/popup.css";
+@import "../components/cards/cards.css";
 
 /* root */
 :root {
